@@ -1,0 +1,10 @@
+[package]
+name = "minecord"
+version = "0.1.0"
+authors = ["42triangles <42triangles@tutanota.com>"]
+edition = "2018"
+
+[dependencies]
+rand = "0.6"
+arrayvec = "0.4"
+structopt = "0.2"
