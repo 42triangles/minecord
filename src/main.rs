@@ -42,7 +42,7 @@ fn main() {
     let (safe_pos, safe_count) = if conf.open_first {
         minefield.safest_field(&mut rng)
     } else {
-        ([0, 0], 0)
+        ([0, 0], 0)  // This isn't used, it's just to please RAII. Also, not calculating that is just faster here.
     };
 
     macro_rules! field {
