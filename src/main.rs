@@ -55,8 +55,8 @@ fn main() {
     }
 
     println!("***{}x{}, {} mines***", conf.width, conf.height, conf.minecount);
-    for x in 0..(minefield.width()) {
-        for y in 0..(minefield.height()) {
+    for y in 0..(minefield.height()) {
+        for x in 0..(minefield.width()) {
             if conf.open_first && [x, y] == safe_pos {
                 field!(uncovered NUMERALS[safe_count]);
             } else if let Some(number) = minefield.number([x, y]) {
