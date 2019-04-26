@@ -28,7 +28,8 @@ pub struct Minefield {
 impl Minefield {
     pub fn new(width: usize, height: usize) -> Self {
         if width.checked_mul(height).unwrap_or(usize::MAX) == usize::MAX {
-            // `neighbours` needs to be able to add one without wrapping over
+            // `neighbours` needs to be able to add one without wrapping over,
+            // and to subtract one without the wrapped result of `0 - 1` being a valid coordinate component
             panic!("Dimensional overload. Kaboom.");
         }
 
