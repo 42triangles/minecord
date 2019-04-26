@@ -28,7 +28,7 @@ pub struct Minefield {
 impl Minefield {
     pub fn new(width: usize, height: usize) -> Self {
         if width.checked_mul(height).unwrap_or(usize::MAX) == usize::MAX {
-            // usize::MAX is used in the implementation of `neighbours`
+            // `neighbours` needs to be able to add one without wrapping over
             panic!("Dimensional overload. Kaboom.");
         }
 
