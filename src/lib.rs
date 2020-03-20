@@ -94,6 +94,10 @@ impl<R: rand::Rng> std::fmt::Display for MinefieldGenerator<R> {
                     field!(mine);
                 }
             }
+
+            if y != minefield.height() - 1 {
+                writeln!(f, "")?;
+            }
         }
 
         Ok(())
