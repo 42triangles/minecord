@@ -20,13 +20,13 @@ const NUMERALS: [&'static str; 9] = [
 #[derive(Clone, StructOpt, Debug)]
 #[structopt(name = "minecord")]
 pub struct Conf {
-    width: usize,
-    height: usize,
-    minecount: usize,
+    pub width: usize,
+    pub height: usize,
+    pub minecount: usize,
     #[structopt(default_value = ":bomb:")]
-    mine: String,
+    pub mine: String,
     #[structopt(short = "o", long = "open-first")]
-    open_first: bool,
+    pub open_first: bool,
 }
 
 #[derive(Debug)]
